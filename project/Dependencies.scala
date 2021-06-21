@@ -11,6 +11,9 @@ object Dependencies {
     val kafka = "2.8.0"
     val log4cats = "2.1.1"
     val logback = "1.2.3"
+
+    val kindProjector = "0.13.0"
+    val betterMonadicFor = "0.3.1"
   }
 
   lazy val trace4catsAvro = "io.janstenpickle"           %% "trace4cats-avro"            % Versions.trace4cats
@@ -21,4 +24,7 @@ object Dependencies {
   lazy val fs2Kafka = "com.github.fd4s"              %% "fs2-kafka"       % Versions.fs2Kafka
   lazy val log4cats = "org.typelevel"                %% "log4cats-slf4j"  % Versions.log4cats
   lazy val logback = "ch.qos.logback"                 % "logback-classic" % Versions.logback
+
+  lazy val kindProjector = ("org.typelevel" % "kind-projector"     % Versions.kindProjector).cross(CrossVersion.full)
+  lazy val betterMonadicFor = "com.olegpy" %% "better-monadic-for" % Versions.betterMonadicFor
 }
