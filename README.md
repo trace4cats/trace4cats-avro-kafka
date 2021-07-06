@@ -11,8 +11,8 @@
 Add it to your `build.sbt`:
 
 ```scala
-"io.janstenpickle" %% "trace4cats-avro-kafka-exporter" % "<version>"
-"io.janstenpickle" %% "trace4cats-avro-kafka-consumer" % "<version>"
+"io.janstenpickle" %% "trace4cats-avro-kafka-exporter" % "0.12.0-RC2"
+"io.janstenpickle" %% "trace4cats-avro-kafka-consumer" % "0.12.0-RC2"
 ```
 
 ## Contributing
