@@ -6,6 +6,7 @@ object Dependencies {
     val scala213 = "2.13.6"
 
     val trace4cats = "0.12.0-RC2"
+    val trace4catsAvro = "0.12.0-RC2"
 
     val fs2Kafka = "2.1.0"
     val kafka = "2.8.0"
@@ -16,7 +17,7 @@ object Dependencies {
     val betterMonadicFor = "0.3.1"
   }
 
-  lazy val trace4catsAvro = "io.janstenpickle"           %% "trace4cats-avro"            % Versions.trace4cats
+  lazy val trace4catsAvro = "io.janstenpickle"           %% "trace4cats-avro"            % Versions.trace4catsAvro
   lazy val trace4catsExporterCommon = "io.janstenpickle" %% "trace4cats-exporter-common" % Versions.trace4cats
   lazy val trace4catsTestkit = "io.janstenpickle"        %% "trace4cats-testkit"         % Versions.trace4cats
 
