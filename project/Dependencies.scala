@@ -11,7 +11,7 @@ object Dependencies {
     val fs2Kafka = "2.1.0"
     val kafka = "2.8.0"
     val log4cats = "2.1.1"
-    val logback = "1.2.4"
+    val logback = "1.2.5"
 
     val kindProjector = "0.13.0"
     val betterMonadicFor = "0.3.1"
