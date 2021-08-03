@@ -41,8 +41,11 @@ lazy val `avro-kafka-consumer` =
     .settings(
       name := "trace4cats-avro-kafka-consumer",
       libraryDependencies ++= Seq(Dependencies.trace4catsAvro, Dependencies.fs2Kafka, Dependencies.log4cats),
-      libraryDependencies ++= Seq(Dependencies.trace4catsTestkit, Dependencies.embeddedKafka, Dependencies.logback)
-        .map(_ % Test)
+      libraryDependencies ++=
+        (CrossVersion.partialVersion(scalaVersion.value) match {
+          case Some((2, _)) => Seq(Dependencies.trace4catsTestkit, Dependencies.embeddedKafka, Dependencies.logback)
+          case _ => Seq.empty
+        }).map(_ % Test)
     )
 
 lazy val `avro-kafka-exporter` =
@@ -56,6 +59,9 @@ lazy val `avro-kafka-exporter` =
         Dependencies.fs2Kafka,
         Dependencies.log4cats
       ),
-      libraryDependencies ++= Seq(Dependencies.trace4catsTestkit, Dependencies.embeddedKafka, Dependencies.logback)
-        .map(_ % Test)
+      libraryDependencies ++=
+        (CrossVersion.partialVersion(scalaVersion.value) match {
+          case Some((2, _)) => Seq(Dependencies.trace4catsTestkit, Dependencies.embeddedKafka, Dependencies.logback)
+          case _ => Seq.empty
+        }).map(_ % Test)
     )
