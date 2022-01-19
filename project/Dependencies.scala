@@ -10,8 +10,8 @@ object Dependencies {
     val trace4catsAvro = "0.12.0"
 
     val fs2Kafka = "2.3.0"
-    val kafka = "3.0.0"
-    val log4cats = "2.1.1"
+    val kafka = "2.8.1"
+    val log4cats = "2.2.0"
     val logback = "1.2.10"
 
     val kindProjector = "0.13.2"
