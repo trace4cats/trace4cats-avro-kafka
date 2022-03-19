@@ -4,15 +4,15 @@ object Dependencies {
   object Versions {
     val scala212 = "2.12.15"
     val scala213 = "2.13.8"
-    val scala3 = "3.1.0"
+    val scala3 = "3.1.1"
 
     val trace4cats = "0.12.0"
     val trace4catsAvro = "0.12.0"
 
-    val fs2Kafka = "2.3.0"
+    val fs2Kafka = "2.4.0"
     val kafka = "2.8.1"
     val log4cats = "2.2.0"
-    val logback = "1.2.10"
+    val logback = "1.2.11"
 
     val kindProjector = "0.13.2"
     val betterMonadicFor = "0.3.1"
