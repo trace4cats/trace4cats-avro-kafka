@@ -2,14 +2,14 @@ lazy val commonSettings = Seq(
   Compile / compile / javacOptions ++= Seq("-source", "1.8", "-target", "1.8"),
   libraryDependencies ++= {
     CrossVersion.partialVersion(scalaVersion.value) match {
-      case Some((2, _)) =>
+      case Some(2, _) =>
         Seq(compilerPlugin(Dependencies.kindProjector), compilerPlugin(Dependencies.betterMonadicFor))
       case _ => Seq.empty
     }
   },
   scalacOptions += {
     CrossVersion.partialVersion(scalaVersion.value) match {
-      case Some((2, _)) => "-Wconf:any:wv"
+      case Some(2, _) => "-Wconf:any:wv"
       case _ => "-Wconf:any:v"
     }
   },
@@ -41,7 +41,7 @@ lazy val `avro-kafka-consumer` =
       libraryDependencies ++= Seq(Dependencies.trace4catsAvro, Dependencies.fs2Kafka, Dependencies.log4cats),
       libraryDependencies ++=
         (CrossVersion.partialVersion(scalaVersion.value) match {
-          case Some((2, _)) => Seq(Dependencies.trace4catsTestkit, Dependencies.embeddedKafka, Dependencies.logback)
+          case Some(2, _) => Seq(Dependencies.trace4catsTestkit, Dependencies.embeddedKafka, Dependencies.logback)
           case _ => Seq.empty
         }).map(_ % Test)
     )
@@ -59,7 +59,7 @@ lazy val `avro-kafka-exporter` =
       ),
       libraryDependencies ++=
         (CrossVersion.partialVersion(scalaVersion.value) match {
-          case Some((2, _)) => Seq(Dependencies.trace4catsTestkit, Dependencies.embeddedKafka, Dependencies.logback)
+          case Some(2, _) => Seq(Dependencies.trace4catsTestkit, Dependencies.embeddedKafka, Dependencies.logback)
           case _ => Seq.empty
         }).map(_ % Test)
     )
