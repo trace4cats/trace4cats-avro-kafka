@@ -1,4 +1,4 @@
-package io.janstenpickle.trace4cats.avro.kafka
+package trace4cats.avro.kafka
 
 import cats.data.NonEmptyList
 import cats.effect.kernel.{Async, Resource}
@@ -6,9 +6,9 @@ import fs2.Chunk
 import fs2.kafka.{KafkaProducer, ProducerSettings}
 import org.typelevel.log4cats.Logger
 import org.typelevel.log4cats.slf4j.Slf4jLogger
-import io.janstenpickle.trace4cats.`export`.{CompleterConfig, QueuedSpanCompleter}
-import io.janstenpickle.trace4cats.kernel.SpanCompleter
-import io.janstenpickle.trace4cats.model.{CompletedSpan, TraceId, TraceProcess}
+import trace4cats.kernel.SpanCompleter
+import trace4cats.model.{CompletedSpan, TraceId, TraceProcess}
+import trace4cats.{CompleterConfig, QueuedSpanCompleter}
 
 object AvroKafkaSpanCompleter {
   def apply[F[_]: Async](

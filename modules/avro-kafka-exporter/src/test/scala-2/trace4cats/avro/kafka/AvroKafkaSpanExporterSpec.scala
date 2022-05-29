@@ -1,13 +1,10 @@
-package io.janstenpickle.trace4cats.avro.kafka
+package trace4cats.avro.kafka
 
 import cats.Eq
 import cats.data.NonEmptyList
 import cats.effect.IO
 import cats.effect.unsafe.implicits.global
 import fs2.Chunk
-import io.janstenpickle.trace4cats.avro.AvroInstances
-import io.janstenpickle.trace4cats.model.{Batch, CompletedSpan}
-import io.janstenpickle.trace4cats.test.ArbitraryInstances
 import io.github.embeddedkafka.{EmbeddedKafka, EmbeddedKafkaConfig}
 import org.apache.avro.generic.GenericDatumReader
 import org.apache.avro.io.DecoderFactory
@@ -16,6 +13,9 @@ import org.scalacheck.Shrink
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
+import trace4cats.avro.AvroInstances
+import trace4cats.model.{Batch, CompletedSpan}
+import trace4cats.test.ArbitraryInstances
 
 class AvroKafkaSpanExporterSpec
     extends AnyFlatSpec
