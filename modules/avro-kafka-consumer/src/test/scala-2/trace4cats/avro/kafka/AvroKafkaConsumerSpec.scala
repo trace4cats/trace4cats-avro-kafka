@@ -1,4 +1,4 @@
-package io.janstenpickle.trace4cats.avro.kafka
+package trace4cats.avro.kafka
 
 import java.io.ByteArrayOutputStream
 
@@ -7,11 +7,6 @@ import cats.data.NonEmptyList
 import cats.effect.IO
 import cats.effect.unsafe.implicits.global
 import fs2.kafka.{AutoOffsetReset, ConsumerSettings}
-import org.typelevel.log4cats.Logger
-import org.typelevel.log4cats.slf4j.Slf4jLogger
-import io.janstenpickle.trace4cats.avro.AvroInstances
-import io.janstenpickle.trace4cats.model.{CompletedSpan, TraceId}
-import io.janstenpickle.trace4cats.test.ArbitraryInstances
 import io.github.embeddedkafka.{EmbeddedKafka, EmbeddedKafkaConfig}
 import org.apache.avro.generic.GenericDatumWriter
 import org.apache.avro.io.EncoderFactory
@@ -20,6 +15,11 @@ import org.scalacheck.Shrink
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
+import org.typelevel.log4cats.Logger
+import org.typelevel.log4cats.slf4j.Slf4jLogger
+import trace4cats.avro.AvroInstances
+import trace4cats.model.{CompletedSpan, TraceId}
+import trace4cats.test.ArbitraryInstances
 
 class AvroKafkaConsumerSpec
     extends AnyFlatSpec
