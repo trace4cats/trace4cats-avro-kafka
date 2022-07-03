@@ -1,4 +1,4 @@
-package io.janstenpickle.trace4cats.avro.kafka
+package trace4cats.avro.kafka
 
 import cats.ApplicativeThrow
 import cats.data.NonEmptyList
@@ -11,13 +11,13 @@ import cats.syntax.functor._
 import cats.syntax.traverse._
 import fs2.Stream
 import fs2.kafka._
-import org.typelevel.log4cats.Logger
-import org.typelevel.log4cats.slf4j.Slf4jLogger
-import io.janstenpickle.trace4cats.avro.AvroInstances
-import io.janstenpickle.trace4cats.model._
 import org.apache.avro.Schema
 import org.apache.avro.generic.GenericDatumReader
 import org.apache.avro.io.DecoderFactory
+import org.typelevel.log4cats.Logger
+import org.typelevel.log4cats.slf4j.Slf4jLogger
+import trace4cats.avro.AvroInstances
+import trace4cats.model._
 
 object AvroKafkaConsumer {
   implicit def keyDeserializer[F[_]: Sync]: Deserializer[F, Option[TraceId]] =

@@ -53,7 +53,7 @@ lazy val `avro-kafka-exporter` =
       name := "trace4cats-avro-kafka-exporter",
       libraryDependencies ++= Seq(
         Dependencies.trace4catsAvro,
-        Dependencies.trace4catsExporterCommon,
+        Dependencies.trace4catsCore,
         Dependencies.fs2Kafka,
         Dependencies.log4cats
       ),
