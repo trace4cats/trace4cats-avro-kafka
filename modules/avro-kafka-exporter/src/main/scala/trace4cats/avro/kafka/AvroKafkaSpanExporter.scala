@@ -1,4 +1,4 @@
-package io.janstenpickle.trace4cats.avro.kafka
+package trace4cats.avro.kafka
 
 import java.io.ByteArrayOutputStream
 
@@ -11,13 +11,13 @@ import cats.syntax.functor._
 import cats.syntax.show._
 import cats.{Functor, Traverse}
 import fs2.kafka._
-import io.janstenpickle.trace4cats.avro.AvroInstances
-import io.janstenpickle.trace4cats.kernel.SpanExporter
-import io.janstenpickle.trace4cats.model.{Batch, CompletedSpan, TraceId}
 import org.apache.avro.Schema
 import org.apache.avro.generic.GenericDatumWriter
 import org.apache.avro.io.EncoderFactory
 import org.apache.kafka.clients.producer.ProducerConfig
+import trace4cats.avro.AvroInstances
+import trace4cats.kernel.SpanExporter
+import trace4cats.model.{Batch, CompletedSpan, TraceId}
 
 object AvroKafkaSpanExporter {
   implicit def keySerializer[F[_]: Sync]: Serializer[F, TraceId] = Serializer.string[F].contramap[TraceId](_.show)

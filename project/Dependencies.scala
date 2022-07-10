@@ -6,21 +6,21 @@ object Dependencies {
     val scala213 = "2.13.8"
     val scala3 = "3.1.2"
 
-    val trace4cats = "0.13.1"
-    val trace4catsAvro = "0.13.1"
+    val trace4cats = "0.13.1+67-a7d9b849"
+    val trace4catsAvro = "0.13.1+17-f490ab04"
 
     val fs2Kafka = "2.4.0"
     val kafka = "2.8.1"
-    val log4cats = "2.3.1"
+    val log4cats = "2.3.2"
     val logback = "1.2.11"
 
     val kindProjector = "0.13.2"
     val betterMonadicFor = "0.3.1"
   }
 
-  lazy val trace4catsAvro = "io.janstenpickle"           %% "trace4cats-avro"            % Versions.trace4catsAvro
-  lazy val trace4catsExporterCommon = "io.janstenpickle" %% "trace4cats-exporter-common" % Versions.trace4cats
-  lazy val trace4catsTestkit = "io.janstenpickle"        %% "trace4cats-testkit"         % Versions.trace4cats
+  lazy val trace4catsAvro = "io.janstenpickle"    %% "trace4cats-avro"    % Versions.trace4catsAvro
+  lazy val trace4catsCore = "io.janstenpickle"    %% "trace4cats-core"    % Versions.trace4cats
+  lazy val trace4catsTestkit = "io.janstenpickle" %% "trace4cats-testkit" % Versions.trace4cats
 
   lazy val embeddedKafka = "io.github.embeddedkafka" %% "embedded-kafka"  % Versions.kafka
   lazy val fs2Kafka = "com.github.fd4s"              %% "fs2-kafka"       % Versions.fs2Kafka
