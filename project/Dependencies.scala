@@ -2,16 +2,16 @@ import sbt._
 
 object Dependencies {
   object Versions {
-    val scala212 = "2.12.15"
+    val scala212 = "2.12.16"
     val scala213 = "2.13.8"
     val scala3 = "3.1.3"
 
     val trace4cats = "0.13.1+67-a7d9b849"
     val trace4catsAvro = "0.13.1+17-f490ab04"
 
-    val fs2Kafka = "2.4.0"
+    val fs2Kafka = "2.5.0"
     val kafka = "2.8.1"
-    val log4cats = "2.3.1"
+    val log4cats = "2.4.0"
     val logback = "1.2.11"
 
     val kindProjector = "0.13.2"
