@@ -6,7 +6,7 @@ object Dependencies {
     val scala213 = "2.13.8"
     val scala3 = "3.1.3"
 
-    val trace4cats = "0.13.1+67-a7d9b849"
+    val trace4cats = "0.13.1+114-c5a4b269"
     val trace4catsAvro = "0.13.1+17-f490ab04"
 
     val fs2Kafka = "2.5.0"
